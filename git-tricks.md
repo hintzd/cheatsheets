@@ -3,6 +3,19 @@ title: Git tricks
 category: Git
 ---
 
+### Local to new remote repo
+
+    mkdir newRepoName
+    cd newRepoName
+    git init .
+    # Go to github and add a new repo with the name newRepoName, do not add a README or a license (though you can do this later)
+    git remote add origin 
+    git remote -v # check if successful
+    git branch -M main  # Rename master to main if needed
+    git add .
+    git commit -m "initial commit"
+    git push -u origin main
+
 ### Refs
 
     HEAD^       # 1 commit before head
